@@ -23,5 +23,11 @@ Des versions égales ou supérieurs seront donc necessaires pour le bon fonction
 
 ========================================================================================================================================
 
+Commandes utiles:
+
+php bin/console app:clean-sanctions 
+Regarde quelles sanctions sont encore en cours et celles dont la date et dépassé. Si la date est dépassé, la sanction est enlevé et le modstatus repasse en "Pas de sanction".
+/!\ Le lancement manuel de cette commande est temporaire, sur un serveur, cette commande devra être lancé tous les jours à X heure.
+
 Diagramme UML: https://www.figma.com/board/3DCMfzPHGoC6asbxm1AFMN/UMLLifeBuilder?node-id=0-1&t=YzoSViaSo6XZLThc-1
 Maquette : https://www.figma.com/design/uBSlsWzSc8Qlvsi7lyFAg0/LifeBuilder?node-id=0-1&t=TDX8wmZq05W0SriS-1
