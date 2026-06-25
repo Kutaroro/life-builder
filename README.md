@@ -16,7 +16,7 @@ Enfin, les utilisateurs pourront rendre leurs personnages publics et les partage
 
 Versions du projet
 Php: 8.4
-Symfony CLI: 5.15.1
+Symfony 7.3
 Composer: 2.9.3
 PostgreSQL: 16
 Des versions égales ou supérieurs seront donc necessaires pour le bon fonctionnement du projet
@@ -24,6 +24,13 @@ Des versions égales ou supérieurs seront donc necessaires pour le bon fonction
 ========================================================================================================================================
 
 Commandes utiles:
+
+Pour le moment, le site n'est accessible qu'en local. Pour le voir:
+- Cloner le projet
+- Installer les dependances necessaires (verifier vos versions et n'oubliez pas le composer install)
+- Liez votre base de donnée dans un .env.local (DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&charset=utf8")
+- Aller sur le dossier life-builder
+- Faites la commande :symfony server:start.
 
 php bin/console app:clean-sanctions 
 Regarde quelles sanctions sont encore en cours et celles dont la date et dépassé. Si la date est dépassé, la sanction est enlevé et le modstatus repasse en "Pas de sanction".
