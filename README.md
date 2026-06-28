@@ -23,15 +23,17 @@ Des versions égales ou supérieurs seront donc necessaires pour le bon fonction
 
 ========================================================================================================================================
 
-Commandes utiles:
-
 Pour le moment, le site n'est accessible qu'en local. Pour le voir:
 - Cloner le projet
-- Installer les dependances necessaires (verifier vos versions et n'oubliez pas le composer install)
+- Aller sur le dossier life-builder (cd life-builder)
+- Installer les dependances necessaires -> composer install(verifier vos versions si il y a problème)
 - Liez votre base de donnée dans un .env.local (DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&charset=utf8")
-- Faites php bin/console doctrine:database:create
-- Aller sur le dossier life-builder
-- Faites la commande :symfony server:start.
+- Faites " php bin/console doctrine:database:create " pour créer la base de donnée 
+- Générer les tables avec " php bin/console doctrine:migrations:migrate " 
+- Faites la commande " symfony server:start " pour lancer le serveur en local.
+
+
+Commandes utiles:
 
 php bin/console app:clean-sanctions 
 Regarde quelles sanctions sont encore en cours et celles dont la date et dépassé. Si la date est dépassé, la sanction est enlevé et le modstatus repasse en "Pas de sanction".
