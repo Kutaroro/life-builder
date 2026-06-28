@@ -29,6 +29,7 @@ Pour le moment, le site n'est accessible qu'en local. Pour le voir:
 - Cloner le projet
 - Installer les dependances necessaires (verifier vos versions et n'oubliez pas le composer install)
 - Liez votre base de donnée dans un .env.local (DATABASE_URL="postgresql://app:!ChangeMe!@127.0.0.1:5432/app?serverVersion=16&charset=utf8")
+- Faites php bin/console doctrine:database:create
 - Aller sur le dossier life-builder
 - Faites la commande :symfony server:start.
 
